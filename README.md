@@ -2,10 +2,12 @@
 
 標準の LoadImage にメタデータ表示を追加した ComfyUI カスタムノードです。  
 PNG・WebP・MP4 に埋め込まれた生成プロンプトを自動抽出してノード上に表示します。
+![](Slimy_LoadImageSpy.jpg)
 
 ## 機能
 
-- PNG / WebP / JPEG の埋め込みプロンプトを抽出・表示
+- 通常のImageLoaderとしても利用できます（PNG / WebP /jpg）
+- PNG / WebP  の埋め込みプロンプトを抽出・表示
 - **MP4**（ComfyUI 出力動画）のメタデータにも対応
 - ワークフローが埋め込まれている場合は「Load Workflow」ボタンで即ロード
 - プロンプトがなければ「No Metadata」と表示
@@ -29,12 +31,12 @@ git clone https://github.com/Slimy-Comfy/Slimy_LoadImageSpy
 
 ## 対応フォーマット
 
-| フォーマット | メタデータ取得 | ワークフロー取得 |
-|---|---|---|
-| PNG  | ✅ | ✅ |
-| WebP | ✅ | ✅ |
-| JPEG | ✅ | ✅ |
-| MP4  | ✅ | ✅ |
+| フォーマット | 画像読み込み | メタデータ取得 | ワークフロー取得 |
+|---|---|---|---|
+| PNG  | ✅ | ✅ | ✅ |
+| WebP | ✅ | ✅ | ✅ |
+| JPEG | ✅ | ❌ | ❌ |
+| MP4  | ❌ | ✅ | ✅ |
 
 ## 動作環境
 
